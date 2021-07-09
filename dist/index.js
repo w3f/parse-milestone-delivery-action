@@ -126,12 +126,12 @@ const main = async () => {
   const content = await fs.readFile(path, 'utf8')
 
   const regexList = [
-    /(?<=\*\*PR Link:\*\* ).*/g,
+    /(?<=\*\*Application Document:\*\* ).*/g,
     /(?<=\*\*Milestone Number:\*\* ).*/g,
   ]
 
   const outputs = [
-    'pr_link',
+    'application_document',
     'milestone_number',
   ]
 
