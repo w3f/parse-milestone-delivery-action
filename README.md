@@ -1,4 +1,4 @@
-# read-file-action
+# parse-milestone-delivery-action
 
 Read file contents. Forked and adapted from https://github.com/juliangruber/read-file-action
 
@@ -8,7 +8,7 @@ Read file contents. Forked and adapted from https://github.com/juliangruber/read
 steps:
   - name: Reads the filled-in application template and parses it
     id: grant_parser
-    uses: mmagician/read-file-action@master
+    uses: w3f/parse-milestone-delivery-action@master
     with:
       path: <path to the file>
   - name: Echo outputs
