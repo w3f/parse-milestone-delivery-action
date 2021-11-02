@@ -6,7 +6,7 @@ inputs:
     description: 'File path'
     required: true
 outputs:
-  pr_link:
+  application_document:
     description: 'Link to application PR'
   milestone_number:
     description: 'Milestone number'
