@@ -140,7 +140,7 @@ const main = async () => {
       const result = content.match(reg)[0]
       core.setOutput(outputs[i], result)
     } catch {
-      core.error(`Match not found for: ${outputs[i]}`)
+      core.setFailed(`Match not found for: ${outputs[i]}`)
     }
   })
 }
