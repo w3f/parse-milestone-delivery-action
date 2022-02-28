@@ -126,7 +126,7 @@ const main = async () => {
   const content = await fs.readFile(path, 'utf8')
 
   const regexList = [
-    /(?<=\*\*Application Document:\*\*.*https?:\/\/(www\.)?github\.com\/w3f\/(Open-)?Grants-Program\/blob\/master\/applications\/)([-a-zA-Z0-9():_.~!]|%[0-9a-fA-F]{2})+.md/g,
+    /(?<=\*\*Application Document:\*\*.*https?:\/\/(www\.)?github\.com\/w3f\/(Open-)?Grants-Program\/(blob|tree)\/master\/applications\/)([-a-zA-Z0-9():_.~!]|%[0-9a-fA-F]{2})+.md/g,
     /(?<=\*\*Milestone Number:\*\* ).*/g,
   ]
 
