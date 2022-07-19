@@ -11,6 +11,8 @@ const main = async () => {
     /(?<=\*\*Application Document:\*\*.*https?:\/\/(www\.)?github\.com\/w3f\/(Open-)?Grants-Program\/(blob|tree)\/master\/applications\/)([-a-zA-Z0-9():_.~!]|%[0-9a-fA-F]{2})+.md/g,
     /(?<=\*\*Milestone Number:\*\* ).*/g,
   ]
+  
+  regexlist[0] = decodeURI(regexlist[0])
 
   const outputs = [
     'application_document',
