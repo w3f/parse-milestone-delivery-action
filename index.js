@@ -12,8 +12,6 @@ const main = async () => {
     /(?<=\*\*Milestone Number:\*\* ).*/g,
   ]
   
-  regexList[0] = decodeURIComponent(regexList[0])
-
   const outputs = [
     'application_document',
     'milestone_number',
@@ -21,7 +19,7 @@ const main = async () => {
 
   regexList.map(function (reg, i) {
     try {
-      const result = content.match(reg)[0]
+      const result = decodeURIComponent(content.match(reg)[0])
       core.setOutput(outputs[i], result)
     } catch {
       core.setFailed(`Match not found for: ${outputs[i]}`)
