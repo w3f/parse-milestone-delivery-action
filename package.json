@@ -1,7 +1,7 @@
 {
   "name": "parse-milestone-delivery-action",
   "private": true,
-  "version": "3.2",
+  "version": "3.2.0",
   "license": "MIT",
   "description": "Read file contents",
   "repository": "w3f/parse-milestone-delivery-action",
