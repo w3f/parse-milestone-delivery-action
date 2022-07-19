@@ -176,13 +176,18 @@ const main = async () => {
     'milestone_number',
   ]
 
+  var results = []
   regexList.map(function (reg, i) {
     try {
-      const result = decodeURIComponent(content.match(reg)[0])
-      core.setOutput(outputs[i], result)
+      results.push(content.match(reg)[0])
     } catch {
       core.setFailed(`Match not found for: ${outputs[i]}`)
     }
+  })
+  
+  results[0] = decodeURIComponent(results[0])
+  results.map(function (result, i) {
+    core.setOutput(outputs[i], result)
   })
 }
 
