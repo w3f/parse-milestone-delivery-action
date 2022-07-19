@@ -12,7 +12,7 @@ const main = async () => {
     /(?<=\*\*Milestone Number:\*\* ).*/g,
   ]
   
-  regexlist[0] = decodeURI(regexlist[0])
+  regexList[0] = decodeURI(regexList[0])
 
   const outputs = [
     'application_document',
