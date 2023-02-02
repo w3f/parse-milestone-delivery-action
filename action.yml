@@ -10,6 +10,8 @@ outputs:
     description: 'Link to application PR'
   milestone_number:
     description: 'Milestone number'
+  is_maintenance:
+    description: 'True IFF the delivery is for a maintenance grant'
 runs:
   using: 'node12'
   main: 'dist/index.js'

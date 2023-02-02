@@ -368,6 +368,7 @@ const main = async () => {
             isMaintenance = application_document.includes('maintenance')
             application_document = application_document.split('/').pop()
             core.setOutput(reg.name, application_document)
+            core.setOutput('is_maintenance', isMaintenance)
           } else {
             not_found.push(reg.name)
           }
