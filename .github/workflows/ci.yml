@@ -10,7 +10,18 @@ jobs:
         run: |
           npm ci
           npm run build
-      - uses: ./
-        id: package
+      - name: Get example (well formed) applications
+        run: |
+          wget "https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/deliveries/admeta_milestone_1.md"
+          wget "https://raw.githubusercontent.com/w3f/Grant-Milestone-Delivery/master/maintenance_deliveries/Substratesnap_Maintenance-2.md"
+      - name: Test action (normal application)
+        uses: ./
         with:
-          path: package.json
+          path: admeta_milestone_1.md
+      - name: Test action (maintenance application)
+        uses: ./
+        with:
+          path: Substratesnap_Maintenance-2.md
+
+
+          
