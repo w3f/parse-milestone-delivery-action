@@ -11,7 +11,7 @@ const main = async () => {
     {
       name: 'application_document',
       regex: /(?<=\*\*Application Document:\*\* ).*/g,
-      url_regex: /(https?:\/\/(www\.)?github\.com\/w3f\/(Open-)?Grants-Program\/(blob|tree)\/master\/(applications|maintenance)\/)([-a-zA-Z0-9():_.~! ]|%[0-9a-fA-F]{2})+.md/g,
+      url_regex: /(https?:\/\/(www\.)?github\.com\/w3f\/(Open-)?Grants-Program\/(blob|tree)\/master\/applications\/(maintenance\/)?)([-a-zA-Z0-9():_.~! ]|%[0-9a-fA-F]{2})+.md/g,
       filename_regex: /(?<=\/)([-a-zA-Z0-9():_.~! ]|%[0-9a-fA-F]{2})+.md/g
     },
     {
