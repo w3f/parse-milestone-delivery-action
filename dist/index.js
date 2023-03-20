@@ -2825,6 +2825,7 @@ const { promises: fs } = __nccwpck_require__(147)
 
 const main = async () => {
   const path = core.getInput('path')
+  const strict = core.getInput('strict')
   const content = await fs.readFile(path, 'utf8')
 
   const regexList = [
@@ -2879,7 +2880,11 @@ const main = async () => {
   
   if (errors.length > 0) {
     const error_string = `Match not found for: ${errors.join(', ')}`
-    core.setFailed(error_string)
+    if (strict !== 'true') {
+      core.warning(error_string)
+    } else {
+      core.setFailed(error_string)
+    }
   }
 }
 
