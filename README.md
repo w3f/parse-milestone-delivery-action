@@ -11,6 +11,7 @@ steps:
     uses: w3f/parse-milestone-delivery-action@master
     with:
       path: <path to the file>
+      strict: 'false' # optional, default is true
   - name: Echo outputs
     run: echo ${{ steps.grant_parser.outputs.team_name }}
 ```
