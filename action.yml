@@ -17,5 +17,5 @@ outputs:
   is_maintenance:
     description: 'True IFF the delivery is for a maintenance grant'
 runs:
-  using: 'node12'
+  using: 'node20'
   main: 'dist/index.js'
